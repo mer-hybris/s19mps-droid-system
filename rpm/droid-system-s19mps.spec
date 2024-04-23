@@ -2,6 +2,9 @@
 
 %define dsd_path ./
 
+%define build_host_replacement jollabuild
+%define build_user_replacement jolla
+
 Requires(post): coreutils
 Requires(post): libcap
 
