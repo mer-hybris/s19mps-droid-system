@@ -23,8 +23,10 @@ on charger
 ### revo delete charger-apexd
 #    trigger charger-apexd
     trigger charger-fs
-    wait_for_prop vendor.all.modules.ready 1
-    start vendor.charge
+# hybris: systemd handles modules
+#    wait_for_prop vendor.all.modules.ready 1
+# hybris: disable charging UI
+#    start vendor.charge
     class_start thermal
     class_start charged_server
 

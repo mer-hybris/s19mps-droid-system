@@ -1,0 +1,27 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matti=20Lehtim=C3=A4ki?= <matti.lehtimaki@jolla.com>
+Date: Wed, 4 Sep 2024 13:09:58 +0000
+Subject: [PATCH] vendor: Fix charging-only mode
+
+[vendor] Fix charging-only mode
+---
+ sparse/vendor/etc/init/charge.rc | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/sparse/vendor/etc/init/charge.rc b/sparse/vendor/etc/init/charge.rc
+index 756095d69fcef2bf3a86f7a4b1d399b63f7bbfd1..7ca4473fa9c83a7c8be03b873e195547df43883d 100644
+--- a/sparse/vendor/etc/init/charge.rc
++++ b/sparse/vendor/etc/init/charge.rc
+@@ -23,8 +23,10 @@ on charger
+ ### revo delete charger-apexd
+ #    trigger charger-apexd
+     trigger charger-fs
+-    wait_for_prop vendor.all.modules.ready 1
+-    start vendor.charge
++# hybris: systemd handles modules
++#    wait_for_prop vendor.all.modules.ready 1
++# hybris: disable charging UI
++#    start vendor.charge
+     class_start thermal
+     class_start charged_server
+ 
