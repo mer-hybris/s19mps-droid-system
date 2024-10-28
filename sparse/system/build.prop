@@ -111,4 +111,13 @@ persist.silent.reboot.enabled=false
 ####################################
 # from variable PRODUCT_SYSTEM_DEFAULT_PROPERTIES
 ####################################
+#
+# Logging changes
+#
+persist.log.tag=I
+log.tag.gralloc4=W
+log.tag.GNSSMGT=S
+log.tag.CPLOGSVC=S
+log.tag.LIBGPS_LTE=S
+log.tag.vendor.sprd.hardware.gnss@2.2-service=S
 # end of file

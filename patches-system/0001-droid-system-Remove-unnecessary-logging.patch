@@ -1,0 +1,28 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matti=20Lehtim=C3=A4ki?= <matti.lehtimaki@jolla.com>
+Date: Mon, 28 Oct 2024 22:08:39 +0000
+Subject: [PATCH] system: Remove unnecessary logging
+
+[system] Remove unnecessary logging
+---
+ sparse/system/build.prop | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/sparse/system/build.prop b/sparse/system/build.prop
+index 1219eac2b937b13a60163bb28195348f6291ee7e..c605e81d11565977f554822a4eda7bbb1c0c2efa 100644
+--- a/sparse/system/build.prop
++++ b/sparse/system/build.prop
+@@ -111,4 +111,13 @@ persist.silent.reboot.enabled=false
+ ####################################
+ # from variable PRODUCT_SYSTEM_DEFAULT_PROPERTIES
+ ####################################
++#
++# Logging changes
++#
++persist.log.tag=I
++log.tag.gralloc4=W
++log.tag.GNSSMGT=S
++log.tag.CPLOGSVC=S
++log.tag.LIBGPS_LTE=S
++log.tag.vendor.sprd.hardware.gnss@2.2-service=S
+ # end of file
