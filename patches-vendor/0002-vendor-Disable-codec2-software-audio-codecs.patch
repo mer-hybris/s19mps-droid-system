@@ -1,0 +1,29 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Andrew Branson <andrew.branson@seafarix.com>
+Date: Fri, 31 Jan 2025 09:03:56 +0100
+Subject: [PATCH] [vendor] Disable codec2 software audio codecs
+
+---
+ sparse/vendor/etc/media_codecs_c2.xml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/sparse/vendor/etc/media_codecs_c2.xml b/sparse/vendor/etc/media_codecs_c2.xml
+index b24cd92..c64fe36 100644
+--- a/sparse/vendor/etc/media_codecs_c2.xml
++++ b/sparse/vendor/etc/media_codecs_c2.xml
+@@ -31,6 +31,7 @@
+             <Limit name="channel-count" max="2" />
+             <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+         </MediaCodec>
++        <!-- Disabled for AppSupport
+         <MediaCodec name="c2.unisoc.mp3.decoder" type="audio/mpeg">
+             <Limit name="channel-count" max="2" />
+             <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+@@ -46,6 +47,7 @@
+             <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
+             <Limit name="bitrate" range="8000-320000" />
+         </MediaCodec>
++         -->
+         <MediaCodec name="c2.unisoc.hevc.decoder" type="video/hevc">
+             <Alias name="OMX.sprd.hevc.decoder" />
+             <Limit name="size" min="64x64" max="1920x3840" />
