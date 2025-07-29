@@ -120,4 +120,8 @@ log.tag.GNSSMGT=S
 log.tag.CPLOGSVC=S
 log.tag.LIBGPS_LTE=S
 log.tag.vendor.sprd.hardware.gnss@2.2-service=S
+#
+# Fix video recording
+#
+debug.stagefright.c2inputsurface=1
 # end of file
