@@ -1,0 +1,23 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matti=20Lehtim=C3=A4ki?= <matti.lehtimaki@jolla.com>
+Date: Tue, 29 Jul 2025 11:55:21 +0000
+Subject: [PATCH] droid-system: Fix video recording
+
+[droid-system] Fix video recording. JB#62048
+---
+ sparse/system/build.prop | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/sparse/system/build.prop b/sparse/system/build.prop
+index 6dd00445639839e978bb3e4a61c44e3981800be9..fcff8a33935c1614da1841f11663f027cece482c 100644
+--- a/sparse/system/build.prop
++++ b/sparse/system/build.prop
+@@ -120,4 +120,8 @@ log.tag.GNSSMGT=S
+ log.tag.CPLOGSVC=S
+ log.tag.LIBGPS_LTE=S
+ log.tag.vendor.sprd.hardware.gnss@2.2-service=S
++#
++# Fix video recording
++#
++debug.stagefright.c2inputsurface=1
+ # end of file
