@@ -5,6 +5,9 @@
 %define build_host_replacement jollabuild
 %define build_user_replacement jolla
 
+%define separate_system_ext_rpm 1
+%define separate_vendor_rpm 1
+
 Requires(post): coreutils
 Requires(post): libcap
 
